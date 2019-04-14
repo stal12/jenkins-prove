@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                ctest
+                ctest arguments: '-C Debug -VV', installation: 'InSearchPath'
             }
         }
         stage('Deploy') {
