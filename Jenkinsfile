@@ -6,8 +6,9 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat 'mkdir build'
-                bat 'cmake -S . -B build'
-                bat 'cmake --build build -j7'
+                bat 'cd build'
+                bat 'cmake ..'
+                bat 'cmake --build -j7'
                 // cmakeBuild buildDir: 'build', generator: 'Visual Studio 16 2019', installation: 'InSearchPath', sourceDir: '.', cleanBuild: true, steps: [[withCmake: true]]
             }
         }
