@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                ctest -C Debug -VV
+                ctest
             }
         }
         stage('Deploy') {
