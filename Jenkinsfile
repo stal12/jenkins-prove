@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'stal12/gtest:1' }
+    }
     stages {
         stage('Build') {
             steps {
