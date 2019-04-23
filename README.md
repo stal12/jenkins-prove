@@ -1,1 +1,1 @@
-[![Build Status](http://localhost:8080/buildStatus/icon?job=cmake-tests)](http://localhost:8080/job/cmake-tests/)
+[![Build Status](https://jenkins-master-deephealth-unix01.ing.unimore.it/job/prove-cmake/)](https://jenkins-master-deephealth-unix01.ing.unimore.it/job/prove-cmake/)
