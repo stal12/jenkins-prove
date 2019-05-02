@@ -33,15 +33,13 @@ pipeline {
                         stage('Build') {
                             steps {
                                 echo 'Building..'
-                                bat 'mkdir build'
-                                bat 'cd build'
-                                cmakeBuild buildDir: '.', installation: 'InSearchPath', sourceDir: '..', cleanBuild: true, steps: [[withCmake: true]]
+                                cmakeBuild buildDir: 'build', installation: 'InSearchPath', sourceDir: '.', cleanBuild: true, steps: [[withCmake: true]]
                              }
                         }
                         stage('Test') {
                             steps {
                                 echo 'Testing..'
-                                ctest arguments: '-C Debug -VV', installation: 'InSearchPath', workingDir: '.'
+                                bat 'cd build && ctest -C Debug -VV'
                             }
                         }
                     }
